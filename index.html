@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <div class="tab">
+        <div class="bg bg1 section">
+            <div class="tab_title">
+                <a href="#">제목1</a>
+                <a href="#">제목2</a>
+                <a href="#">제목3</a>
+            </div>
+            <div class="tab_contents">
+                <div class="con con1">"제이쿼리는 자바스크립트 라이브러리입니다."</div>
+                <div class="con con2">"제이쿼리는 DOM 이벤트와 스타일을 자바스크립트보다 쉽게 제작할 수 있습니다."</div>
+                <div class="con con3">"안일혁은 잘생겼다."</div>
+            </div>
+        </div>
+        <div class="bg bg2 section"></div>
+        <div class="bg bg3 section"></div>
+        <div class="bg bg4 section"></div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script/jquery.fullPage.js"></script>
+    <script>
+
+        $('.tab').fullpage({
+            scrollBar:true,
+            scrollingSpeed:300
+        })
+
+        $('.con2').hide();
+        $('.con3').hide();
+        $('.tab_title a:nth-child(1)').on('click',function(){
+            $('.con1').show();
+            $('.con2').hide();
+            $('.con3').hide();
+        });
+        $('.tab_title a:nth-child(2)').on('click',function(){
+            $('.con1').hide();
+            $('.con2').show();
+            $('.con3').hide();
+        });
+        $('.tab_title a:nth-child(3)').on('click',function(){
+            $('.con1').hide();
+            $('.con2').hide();
+            $('.con3').show();
+        });
+
+
+    </script>
+</body>
+</html>
